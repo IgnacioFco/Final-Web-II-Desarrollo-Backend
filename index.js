@@ -15,7 +15,7 @@ mongoose.connect(mongoUri, {
   useNewUrlParser: true,         
   useUnifiedTopology: true,      
 })
-.then(() => console.log('✅ Conectado a MongoDB correctamente'))
+.then(() => console.log('\x1b[32m%s\x1b[0m','Conectado a MongoDB correctamente!'))
 .catch(err => {
   console.error('Error al conectar con MongoDB:', err.message);
   process.exit(1); // Sale del proceso si no logra conectar
@@ -26,10 +26,10 @@ const moviesRouter = require('./routes/movies.routes.js');
 app.use('/movies', moviesRouter);
 
 app.get('/', (req, res) => {
-  res.send('Servidor funcionando 🎬 Bienvenido a la API de películas de terror');
+  res.send('\x1b[31m%s\x1b[0m','Servidor funcionando 🎬 Bienvenido a la API de películas de terror');
 });
 
 // IniciO el servidor
 app.listen(port, () => {
-  console.log(`🚀 Servidor ejecutándose en http://localhost:${port}`);
+  console.log('\x1b[36m%s\x1b[0m',`Servidor ejecutándose en http://localhost:${port}`);
 });
