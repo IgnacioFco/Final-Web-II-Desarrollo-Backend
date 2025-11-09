@@ -1,7 +1,6 @@
-# API de Películas de Terror  
+# API de Películas
 **Examen Parcial II – Desarrollo Backend (Node.js + Express + MongoDB)**  
 
- ----- * -----
 
 ## Descripción  
 
@@ -17,7 +16,6 @@ El sistema permite:
 
 El propósito del proyecto es demostrar el uso de un **backend funcional con conexión a una base de datos NoSQL**, aplicando buenas prácticas de desarrollo y modularización de código.
 
- ----- * -----
 
 ## Tecnologías  
 - Node.js  
