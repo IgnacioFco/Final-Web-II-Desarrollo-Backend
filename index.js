@@ -26,10 +26,10 @@ const moviesRouter = require('./routes/movies.routes.js');
 app.use('/movies', moviesRouter);
 
 app.get('/', (req, res) => {
-  res.send('\x1b[31m%s\x1b[0m','Servidor funcionando 🎬 Bienvenido a la API de películas de terror');
+  res.send('Servidor funcionando. Bienvenido a la API de películas de terror! 🎬' );
 });
 
-// IniciO el servidor
+// Inicio el servidor
 app.listen(port, () => {
   console.log('\x1b[36m%s\x1b[0m',`Servidor ejecutándose en http://localhost:${port}`);
 });
