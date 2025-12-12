@@ -21,12 +21,18 @@ mongoose.connect(mongoUri, {
   process.exit(1); // Sale del proceso si no logra conectar
 });
 
-const moviesRouter = require('./routes/movies.routes.js');
+const authRoutes = require('./routes/auth.routes');
+app.use('/auth', authRoutes);
 
+const moviesRouter = require('./routes/movies.routes.js');
 app.use('/movies', moviesRouter);
 
 app.get('/', (req, res) => {
   res.send('Servidor funcionando. Bienvenido a la API de películas de terror! 🎬' );
+});
+
+app.use((req, res) => {
+  res.status(404).json({ message: "Ruta no encontrada" });
 });
 
 // Inicio el servidor
